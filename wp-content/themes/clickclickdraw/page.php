@@ -10,7 +10,7 @@ if(have_posts()):
         <div class="content-wrap">
           <div class="nll-bar sidebar-left w70">
             <div class="title-container large">
-              <h2><?php the_title(); ?></h2>
+              <h2><span><?php the_title(); ?></span></h2>
             </div>
             <div class="article-content">
               <div class="story-description list-component-body<?php if(get_field('big_first_letter') == true) echo ' bigFirst'; ?>">
@@ -28,8 +28,6 @@ if(have_posts()):
   <?php
   endwhile;
 endif;
-
-include 'inc/tweet.php';
 ?>
 </div>
 <?php get_footer(); ?>

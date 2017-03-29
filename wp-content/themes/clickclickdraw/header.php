@@ -12,6 +12,6 @@
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body <?php body_class(); ?>>
-  <nav>
+  <nav id="mainNav">
     <?php wp_nav_menu(); ?>
   </nav>

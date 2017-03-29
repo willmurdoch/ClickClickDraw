@@ -8,5 +8,218 @@
   Text Domain: clickclickdraw
   */
 body {
+  margin: 0;
+  padding: 0;
   font-family: futura-pt, "Myriad Pro", "Sans Serif";
+  font-size: 18px;
+}
+
+nav#mainNav {
+  height: 100px;
+  background: #66ffb3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+nav#mainNav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  text-align: center;
+  max-width: 940px;
+  margin: 0 auto;
+  border-left: 1px solid rgba(255, 255, 255, 0.75);
+  border-right: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+nav#mainNav li {
+  flex: 1;
+  height: 100px;
+}
+
+nav#mainNav li:not(:last-of-type) {
+  border-right: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+nav#mainNav li a:before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  height: 44px;
+  vertical-align: middle;
+  margin-right: 15px;
+  width: 37px;
+  background-image: url(images/labels_white.png);
+  margin-top: -5px;
+}
+
+nav#mainNav li a[href*="blog"]:before {
+  background-position: -37px 0px;
+  width: 47px;
+}
+
+nav#mainNav li a[href*="about"]:before {
+  background-position: -120px 0px;
+  width: 25px;
+}
+
+nav#mainNav li a[href*="contact"]:before {
+  background-position: -84px 0px;
+}
+
+nav#mainNav li:nth-child(3) {
+  font-size: 0;
+}
+
+nav#mainNav li:nth-child(3) a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  margin-top: 0;
+  left: 50%;
+  margin-left: -81px;
+  display: block;
+  width: 162px;
+  height: 136px;
+  background: url(images/logo.png) center no-repeat;
+}
+
+nav#mainNav a {
+  display: block;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 100px;
+  width: 100%;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav#mainNav a:hover {
+  background: #FFF;
+}
+
+nav#mainNav a:hover:before {
+  background-image: url(images/labels_green.png);
+}
+
+nav#mainNav .current-menu-item:not(:nth-child(3)) a {
+  background: #FFF;
+}
+
+nav#mainNav .current-menu-item:not(:nth-child(3)) a:before {
+  background-image: url(images/labels_green.png);
+}
+
+#wrapper {
+  margin: 100px auto 0;
+}
+
+.scaler {
+  padding-top: 1rem;
+  width: 90%;
+  max-width: 905px;
+  margin: 1rem auto 0;
+}
+
+.title {
+  font-size: 46px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 100;
+  margin: 0 auto;
+  position: relative;
+}
+
+.title span {
+  background: #FFF;
+  position: relative;
+  max-width: 400px;
+  width: auto;
+  display: table;
+  z-index: 1;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.title:after {
+  content: '';
+  position: absolute;
+  bottom: calc(50% - 22px);
+  height: 1px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 900px;
+  background: #bfbfbf;
+  z-index: 0;
+}
+
+.title.work:before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  height: 44px;
+  vertical-align: middle;
+  width: 36px;
+  display: block;
+  margin: 0 auto;
+  background-image: url(images/labels_black.png);
+}
+
+.title.blog:before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  height: 44px;
+  vertical-align: middle;
+  width: 45px;
+  background-position: -38px 0;
+  display: block;
+  margin: 0 auto;
+  background-image: url(images/labels_black.png);
+}
+
+.title.about:before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  height: 44px;
+  vertical-align: middle;
+  width: 25px;
+  background-position: -120px 0;
+  display: block;
+  margin: 0 auto;
+  background-image: url(images/labels_black.png);
+}
+
+.title.contact:before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  height: 44px;
+  vertical-align: middle;
+  width: 37px;
+  background-position: -84px 0;
+  display: block;
+  margin: 0 auto;
+  background-image: url(images/labels_black.png);
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.hero img {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
