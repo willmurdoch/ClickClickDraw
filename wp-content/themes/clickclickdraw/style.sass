@@ -37,7 +37,7 @@ body
   font-family: futura-pt, "Myriad Pro", "Sans Serif"
 
 @mixin cta($background, $color)
-  a.btn
+  a.btn, input[type="submit"]
     text-transform: uppercase
     font-size: 1.8rem
     padding: 0.7rem 1.6rem
@@ -48,6 +48,7 @@ body
     text-decoration: none
     display: table
     margin: 2rem auto 0
+    cursor: pointer
     transition: background 0.2s ease-out, color 0.2s ease-out
     &:hover
       background: $color
@@ -134,6 +135,8 @@ nav#mainNav
         width: 162px
         height: 136px
         background: url(images/logo.png) center no-repeat!important
+      a:hover:before
+        filter: invert(100%) brightness(2)
   a
     display: block
     text-transform: uppercase
@@ -148,18 +151,18 @@ nav#mainNav
       &:before
         background-image: url(images/labels_green.png)
 
-  .current-menu-item:not(:nth-child(3))
+  .current-menu-item:not(:nth-child(3)), .current_page_parent:not(:nth-child(3))
     a
       background: #FFF
       &:before
         background-image: url(images/labels_green.png)
 
-.blog
+.blog, .single-post
   nav#mainNav, nav#mobileNav
     background: $ccBlue
     a:hover:before
       background-image: url(images/labels_blue.png)
-    .current-menu-item:not(:nth-child(3))
+    .current-menu-item:not(:nth-child(3)), .current_page_parent:not(:nth-child(3))
       a:before
         background-image: url(images/labels_blue.png)
 
@@ -183,6 +186,151 @@ nav#mainNav
     .current-menu-item:not(:nth-child(3))
       a:before
         background-image: url(images/labels_yellow.png)
+  .scaler
+    text-align: center
+    p
+      margin: 1rem auto
+
+.blog-tile
+  max-width: 800px
+  margin: 0 auto
+  img
+    display: block
+    width: 90%
+    margin: 2rem auto
+  h3
+    font-size: 1.6rem
+    text-transform: uppercase
+    text-align: center
+    font-weight: 300
+    margin: 2rem auto 0
+    a
+      font-weight: 300
+      color: #333
+      text-decoration: none
+      transition: color 0.2s ease-out
+      &:hover
+        color: $ccBlue
+  p.date
+    font-weight: 600
+    font-size: 0.9rem
+    text-align: center
+    margin: 0
+  .post-blurb
+    margin-bottom: 4rem
+    p
+      font-size: 1rem
+      margin: 0 auto
+    .readMore
+      display: inline-block
+      color: $ccBlue
+      font-weight: 600
+      margin-left: 0.5rem
+      text-decoration: none
+      transition: color 0.2s ease-out
+      &:hover
+        color: darken($ccBlue, 20%)
+
+.single-post
+  .scaler
+    max-width: 800px
+    margin-bottom: 4rem
+    p
+      font-weight: 100
+    a
+      color: $ccBlue
+      text-decoration: none
+      font-weight: 600
+      transition: color 0.2s ease-out
+      &:hover
+        color: darken($ccBlue, 20%)
+    img
+      max-width: 100%
+      height: auto
+      display: block
+      margin: 0.5rem auto
+    iframe
+      margin: 1.5rem auto
+      max-width: 100%
+    .blog-tile
+      img
+        margin: 2rem auto
+  +cta(#FFF, $ccBlue)
+
+form
+  font-size: 0
+  padding: 2rem 0
+  +cta($ccYellow, #333)
+  fieldset
+    border: 0
+    outline: 0
+    width: 50%
+    margin: 0
+    padding: 0
+    text-align: left
+    display: inline-block
+    vertical-align: top
+    font-size: 1rem
+    position: relative
+    @media (max-width:$mobile)
+      width: 100%
+    &:nth-of-type(2)
+      label
+        float: right
+    span.wpcf7-not-valid-tip
+      display: none
+    br
+      display: none
+    input
+      font-size: 1rem
+      width: calc(95% - 1rem)
+      padding: 0 0.5rem
+      height: 52px
+      outline: 2px solid $ccYellow
+      outline-offset: 0
+      border: 0
+      @media (max-width:$mobile)
+        width: calc(100% - 1rem)
+    textarea
+      float: right
+      width: calc(95% - 1rem)
+      font-size: 1rem
+      padding: 0.5rem
+      height: calc(164px - 1.85rem)
+      outline: 2px solid $ccYellow
+      outline-offset: 0
+      border: 0
+      @media (max-width:$mobile)
+        width: calc(100% - 1rem)
+    label
+      display: block
+      text-transform: uppercase
+      font-weight: 500
+      width: 95%
+      margin: 0 0 0.25rem
+      @media (max-width:$mobile)
+        width: 100%
+  .wpcf7-validation-errors
+    display: block
+    width: 100%
+    font-size: 1rem
+    margin: 0 0 2rem
+    padding: 0
+    border: 0
+    color: $ccRed
+  input, textarea
+    outline: 0
+    appearance: none
+    -webkit-appearance: none
+    -moz-appearance: none
+    -ms-apeparance: none
+    font-family: futura-pt, "Myriad Pro", "Sans Serif"
+    transition: box-shadow 0.2s ease-out
+    &:focus, &:active
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
+  input[type="submit"]
+    font-weight: 500
+
 
 #wrapper
   margin: 100px auto 0
@@ -312,6 +460,14 @@ section.tweets
   .title:after
     bottom: calc(50% - 32px)
 
+.single-work
+  img
+    max-width: 100%
+  +cta(#FFF, $ccRed)
+  a.btn
+    display: table
+    margin: 1.5rem auto 4rem
+
 
 $networks: ('twitter')('linkedin')('dribbble')('mailto')('instagram')
 .social-icons
@@ -324,7 +480,6 @@ $networks: ('twitter')('linkedin')('dribbble')('mailto')('instagram')
     display: inline-block
     vertical-align: middle
     margin: 5px 1.2rem
-    transition: background-image 0.2s ease-out
     @each $network, $i in $networks
       &[href*="#{$network}"]
         background-image: url(images/#{$network}.png)
@@ -341,6 +496,8 @@ footer
   text-align: center
   #footer-logo
     margin-bottom: 1rem
+    &:hover
+      filter: invert(100%) brightness(1.2)
   ul
     list-style-type: none
     padding: 0

@@ -8,7 +8,7 @@
  * @since Click Click Draw 2.0.0
  */
 get_header(); ?>
-<div id="wrapper" class="single-work">
+<div id="wrapper" class="single-contact">
   <?php
   if(have_posts()):
     while(have_posts()): the_post();

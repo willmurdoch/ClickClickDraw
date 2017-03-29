@@ -19,6 +19,7 @@
             echo '<img class="gallery-image" src="'.get_sub_field('image').'" alt="" />';
           endwhile;
         endif; ?>
+        <a class="btn" href="<?php echo get_site_url(); ?>">Back to All Work</a>
       </div>
   <?php endwhile;
 endif; ?>

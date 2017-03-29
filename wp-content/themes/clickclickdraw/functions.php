@@ -65,6 +65,7 @@ function work_content_type() {
     'public' => true,
     'taxonomies' => array('category'),
     'menu_position' => 21,
+    'rewrite' => array( 'slug' => 'work', 'with_front' => false ),
     'menu_icon' => 'dashicons-images-alt',
     'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
     'has_archive' => true,
