@@ -14,9 +14,14 @@ get_header(); ?>
    );
    $myWork = get_posts($args);
    foreach($myWork as $work):
-     print_r($work);
-     echo $work->post_title;
-     echo '<a href="'.get_the_permalink($work->ID).'">Link</a>';
+     $category = get_the_category($work->ID);
+     $featuredImage = wp_get_attachment_url(get_post_thumbnail_id($work->ID));
+     echo '<a href="'.get_the_permalink($work->ID).'" style="background-image:url('.$featuredImage.');">'; ?>
+      <span class="text-overlay">
+        <p class="header"><?php echo $work->post_title; ?></p>
+        <p class="category"><?php echo $category[0]->name; ?></p>
+      </span>
+     <?php echo '</a>';
    endforeach;
 
    include 'inc/contact.php'; ?>
