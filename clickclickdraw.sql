@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2017 at 04:39 AM
+-- Generation Time: Mar 29, 2017 at 07:36 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -354,14 +354,14 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (78, 41, '_wp_attached_file', '2017/03/Chris-Fernandez-Agilitee-NFL-banner.png'),
 (79, 41, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1600;s:6:\"height\";i:350;s:4:\"file\";s:47:\"2017/03/Chris-Fernandez-Agilitee-NFL-banner.png\";s:5:\"sizes\";a:4:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:47:\"Chris-Fernandez-Agilitee-NFL-banner-150x150.png\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:9:\"image/png\";}s:6:\"medium\";a:4:{s:4:\"file\";s:46:\"Chris-Fernandez-Agilitee-NFL-banner-300x66.png\";s:5:\"width\";i:300;s:6:\"height\";i:66;s:9:\"mime-type\";s:9:\"image/png\";}s:12:\"medium_large\";a:4:{s:4:\"file\";s:47:\"Chris-Fernandez-Agilitee-NFL-banner-768x168.png\";s:5:\"width\";i:768;s:6:\"height\";i:168;s:9:\"mime-type\";s:9:\"image/png\";}s:5:\"large\";a:4:{s:4:\"file\";s:48:\"Chris-Fernandez-Agilitee-NFL-banner-1024x224.png\";s:5:\"width\";i:1024;s:6:\"height\";i:224;s:9:\"mime-type\";s:9:\"image/png\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
 (80, 28, '_thumbnail_id', '41'),
-(81, 2, '_edit_lock', '1490747452:1'),
+(81, 2, '_edit_lock', '1490764613:1'),
 (82, 2, '_edit_last', '1'),
 (83, 43, '_edit_last', '1'),
-(84, 43, '_wp_page_template', 'default'),
-(85, 43, '_edit_lock', '1490753988:1'),
+(84, 43, '_wp_page_template', 'about.php'),
+(85, 43, '_edit_lock', '1490765004:1'),
 (86, 45, '_edit_last', '1'),
-(87, 45, '_wp_page_template', 'default'),
-(88, 45, '_edit_lock', '1490747472:1'),
+(87, 45, '_wp_page_template', 'contact.php'),
+(88, 45, '_edit_lock', '1490765206:1'),
 (89, 47, '_menu_item_type', 'custom'),
 (90, 47, '_menu_item_menu_item_parent', '0'),
 (91, 47, '_menu_item_object_id', '47'),
@@ -485,11 +485,25 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (213, 60, '_menu_item_url', 'http://localhost/clickclickdraw/'),
 (215, 64, '_edit_last', '1'),
 (216, 64, '_wp_page_template', 'work.php'),
-(217, 64, '_edit_lock', '1490755002:1'),
+(217, 64, '_edit_lock', '1490764030:1'),
 (218, 63, '_wp_trash_meta_status', 'publish'),
 (219, 63, '_wp_trash_meta_time', '1490754170'),
 (220, 1, '_edit_lock', '1490755002:1'),
-(221, 1, '_edit_last', '1');
+(221, 1, '_edit_last', '1'),
+(222, 68, '_edit_last', '1'),
+(224, 68, '_edit_lock', '1490762138:1'),
+(225, 70, '_wp_attached_file', '2017/03/work-runningknight2.gif'),
+(226, 70, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1600;s:6:\"height\";i:350;s:4:\"file\";s:31:\"2017/03/work-runningknight2.gif\";s:5:\"sizes\";a:4:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:31:\"work-runningknight2-150x150.gif\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:9:\"image/gif\";}s:6:\"medium\";a:4:{s:4:\"file\";s:30:\"work-runningknight2-300x66.gif\";s:5:\"width\";i:300;s:6:\"height\";i:66;s:9:\"mime-type\";s:9:\"image/gif\";}s:12:\"medium_large\";a:4:{s:4:\"file\";s:31:\"work-runningknight2-768x168.gif\";s:5:\"width\";i:768;s:6:\"height\";i:168;s:9:\"mime-type\";s:9:\"image/gif\";}s:5:\"large\";a:4:{s:4:\"file\";s:32:\"work-runningknight2-1024x224.gif\";s:5:\"width\";i:1024;s:6:\"height\";i:224;s:9:\"mime-type\";s:9:\"image/gif\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(227, 64, '_thumbnail_id', '70'),
+(228, 71, '_wp_attached_file', '2017/03/about_familyillustration2.png'),
+(229, 71, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1600;s:6:\"height\";i:350;s:4:\"file\";s:37:\"2017/03/about_familyillustration2.png\";s:5:\"sizes\";a:4:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:37:\"about_familyillustration2-150x150.png\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:9:\"image/png\";}s:6:\"medium\";a:4:{s:4:\"file\";s:36:\"about_familyillustration2-300x66.png\";s:5:\"width\";i:300;s:6:\"height\";i:66;s:9:\"mime-type\";s:9:\"image/png\";}s:12:\"medium_large\";a:4:{s:4:\"file\";s:37:\"about_familyillustration2-768x168.png\";s:5:\"width\";i:768;s:6:\"height\";i:168;s:9:\"mime-type\";s:9:\"image/png\";}s:5:\"large\";a:4:{s:4:\"file\";s:38:\"about_familyillustration2-1024x224.png\";s:5:\"width\";i:1024;s:6:\"height\";i:224;s:9:\"mime-type\";s:9:\"image/png\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(230, 2, '_thumbnail_id', '71'),
+(231, 72, '_wp_attached_file', '2017/03/about_mePainting2.png'),
+(232, 72, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1600;s:6:\"height\";i:350;s:4:\"file\";s:29:\"2017/03/about_mePainting2.png\";s:5:\"sizes\";a:4:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:29:\"about_mePainting2-150x150.png\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:9:\"image/png\";}s:6:\"medium\";a:4:{s:4:\"file\";s:28:\"about_mePainting2-300x66.png\";s:5:\"width\";i:300;s:6:\"height\";i:66;s:9:\"mime-type\";s:9:\"image/png\";}s:12:\"medium_large\";a:4:{s:4:\"file\";s:29:\"about_mePainting2-768x168.png\";s:5:\"width\";i:768;s:6:\"height\";i:168;s:9:\"mime-type\";s:9:\"image/png\";}s:5:\"large\";a:4:{s:4:\"file\";s:30:\"about_mePainting2-1024x224.png\";s:5:\"width\";i:1024;s:6:\"height\";i:224;s:9:\"mime-type\";s:9:\"image/png\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(233, 43, '_thumbnail_id', '72'),
+(234, 74, '_wp_attached_file', '2017/03/contact_banner2.png'),
+(235, 74, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1600;s:6:\"height\";i:350;s:4:\"file\";s:27:\"2017/03/contact_banner2.png\";s:5:\"sizes\";a:4:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:27:\"contact_banner2-150x150.png\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:9:\"image/png\";}s:6:\"medium\";a:4:{s:4:\"file\";s:26:\"contact_banner2-300x66.png\";s:5:\"width\";i:300;s:6:\"height\";i:66;s:9:\"mime-type\";s:9:\"image/png\";}s:12:\"medium_large\";a:4:{s:4:\"file\";s:27:\"contact_banner2-768x168.png\";s:5:\"width\";i:768;s:6:\"height\";i:168;s:9:\"mime-type\";s:9:\"image/png\";}s:5:\"large\";a:4:{s:4:\"file\";s:28:\"contact_banner2-1024x224.png\";s:5:\"width\";i:1024;s:6:\"height\";i:224;s:9:\"mime-type\";s:9:\"image/png\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(236, 45, '_thumbnail_id', '74');
 
 -- --------------------------------------------------------
 
@@ -529,7 +543,7 @@ CREATE TABLE `wp_posts` (
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
 (1, 1, '2017-03-28 23:10:23', '2017-03-28 23:10:23', 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!\r\n\r\n<img class=\"alignnone size-medium wp-image-41\" src=\"http://localhost/clickclickdraw/wp-content/uploads/2017/03/Chris-Fernandez-Agilitee-NFL-banner-300x66.png\" alt=\"\" width=\"300\" height=\"66\" />', 'Hello world!', '', 'publish', 'open', 'open', '', 'hello-world', '', '', '2017-03-29 02:31:19', '2017-03-29 02:31:19', '', 0, 'http://localhost/clickclickdraw/?p=1', 0, 'post', '', 1),
-(2, 1, '2017-03-28 23:10:23', '2017-03-28 23:10:23', '', 'Blog', '', 'publish', 'closed', 'open', '', 'sample-page', '', '', '2017-03-29 00:33:15', '2017-03-29 00:33:15', '', 0, 'http://localhost/clickclickdraw/?page_id=2', 0, 'page', '', 0),
+(2, 1, '2017-03-28 23:10:23', '2017-03-28 23:10:23', '', 'Blog', '', 'publish', 'closed', 'open', '', 'blog', '', '', '2017-03-29 05:18:55', '2017-03-29 05:18:55', '', 0, 'http://localhost/clickclickdraw/?page_id=2', 0, 'page', '', 0),
 (3, 1, '2017-03-28 23:10:31', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-03-28 23:10:31', '0000-00-00 00:00:00', '', 0, 'http://localhost/clickclickdraw/?p=3', 0, 'post', '', 0),
 (4, 1, '2017-03-28 23:37:52', '0000-00-00 00:00:00', '', 'Home', '', 'draft', 'closed', 'closed', '', '', '', '', '2017-03-28 23:37:52', '0000-00-00 00:00:00', '', 0, 'http://localhost/clickclickdraw/?p=4', 1, 'nav_menu_item', '', 0),
 (5, 1, '2017-03-28 23:37:52', '0000-00-00 00:00:00', ' ', '', '', 'draft', 'closed', 'closed', '', '', '', '', '2017-03-28 23:37:52', '0000-00-00 00:00:00', '', 0, 'http://localhost/clickclickdraw/?p=5', 1, 'nav_menu_item', '', 0),
@@ -570,9 +584,9 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (40, 1, '2017-03-29 00:29:33', '2017-03-29 00:29:33', '', 'Chris-Fernandez-Agilitee-NFL-8', '', 'inherit', 'open', 'closed', '', 'chris-fernandez-agilitee-nfl-8', '', '', '2017-03-29 00:29:33', '2017-03-29 00:29:33', '', 28, 'http://localhost/clickclickdraw/wp-content/uploads/2017/03/Chris-Fernandez-Agilitee-NFL-8.png', 0, 'attachment', 'image/png', 0),
 (41, 1, '2017-03-29 00:30:52', '2017-03-29 00:30:52', '', 'Chris-Fernandez-Agilitee-NFL-banner', '', 'inherit', 'open', 'closed', '', 'chris-fernandez-agilitee-nfl-banner', '', '', '2017-03-29 00:30:52', '2017-03-29 00:30:52', '', 28, 'http://localhost/clickclickdraw/wp-content/uploads/2017/03/Chris-Fernandez-Agilitee-NFL-banner.png', 0, 'attachment', 'image/png', 0),
 (42, 1, '2017-03-29 00:33:15', '2017-03-29 00:33:15', '', 'Blog', '', 'inherit', 'closed', 'closed', '', '2-revision-v1', '', '', '2017-03-29 00:33:15', '2017-03-29 00:33:15', '', 2, 'http://localhost/clickclickdraw/2-revision-v1/', 0, 'revision', '', 0),
-(43, 1, '2017-03-29 00:33:26', '2017-03-29 00:33:26', 'Hi, I’m Chris Fernandez, designer, illustrator, unpublished critic and perpetually disappointing blogger. I live in and love Philadelphia; sporadically making time for comics, bad action movies, good <em>actual</em> movies and Salsa – of the dancing variety, though the dip is a reoccurring character in my life, too.\r\n\r\nBeing fortunate enough to love what I do has so much to do with the great people and place I work at, <a href=\"http://brownsteingroup.com/\">Brownstein Group</a>. As a Associate Creative Director, I design, direct and implement beautiful campaigns and brands ranging from traditional to mobile to web and user experience design. For the past 4 years I have also had the great pleasure of teaching a small, but promising sampling of the next wave of future creative talents at my alma mater, <a href=\"http://drexel.edu/\">Drexel University</a>.\r\n\r\nIf you have a project in mind, I’m currently available for freelance work, so please drop a line. Or, if you happen to be a fellow kung-fu enthusiast and would like to recommend a movie or six, feel free to do so. I feel like I’m on the verge of becoming a black belt by sheer volume and frequency of kung fu. <a href=\"http://www.youtube.com/watch?v=7H7iemtCQXQ\">Sho’nuff</a>.', 'About', '', 'publish', 'closed', 'closed', '', 'about', '', '', '2017-03-29 00:40:46', '2017-03-29 00:40:46', '', 0, 'http://localhost/clickclickdraw/?page_id=43', 0, 'page', '', 0),
+(43, 1, '2017-03-29 00:33:26', '2017-03-29 00:33:26', 'Hi, I’m Chris Fernandez, designer, illustrator, unpublished critic and perpetually disappointing blogger. I live in and love Philadelphia; sporadically making time for comics, bad action movies, good <em>actual</em> movies and Salsa – of the dancing variety, though the dip is a reoccurring character in my life, too.\r\n\r\nBeing fortunate enough to love what I do has so much to do with the great people and place I work at, <a href=\"http://brownsteingroup.com/\">Brownstein Group</a>. As a Associate Creative Director, I design, direct and implement beautiful campaigns and brands ranging from traditional to mobile to web and user experience design. For the past 4 years I have also had the great pleasure of teaching a small, but promising sampling of the next wave of future creative talents at my alma mater, <a href=\"http://drexel.edu/\">Drexel University</a>.\r\n\r\nIf you have a project in mind, I’m currently available for freelance work, so please drop a line. Or, if you happen to be a fellow kung-fu enthusiast and would like to recommend a movie or six, feel free to do so. I feel like I’m on the verge of becoming a black belt by sheer volume and frequency of kung fu. <a href=\"http://www.youtube.com/watch?v=7H7iemtCQXQ\">Sho’nuff</a>.', 'About', '', 'publish', 'closed', 'closed', '', 'about', '', '', '2017-03-29 05:22:57', '2017-03-29 05:22:57', '', 0, 'http://localhost/clickclickdraw/?page_id=43', 0, 'page', '', 0),
 (44, 1, '2017-03-29 00:33:26', '2017-03-29 00:33:26', '', 'About', '', 'inherit', 'closed', 'closed', '', '43-revision-v1', '', '', '2017-03-29 00:33:26', '2017-03-29 00:33:26', '', 43, 'http://localhost/clickclickdraw/43-revision-v1/', 0, 'revision', '', 0),
-(45, 1, '2017-03-29 00:33:33', '2017-03-29 00:33:33', '', 'Contact', '', 'publish', 'closed', 'closed', '', 'contact', '', '', '2017-03-29 00:33:33', '2017-03-29 00:33:33', '', 0, 'http://localhost/clickclickdraw/?page_id=45', 0, 'page', '', 0),
+(45, 1, '2017-03-29 00:33:33', '2017-03-29 00:33:33', 'Questions or inquiries? Even if you’re just looking for advice, I’d be happy to hear from you.\r\n\r\nSo please reach out and I will get back to you as soon as I can.', 'Contact', '', 'publish', 'closed', 'closed', '', 'contact', '', '', '2017-03-29 05:26:45', '2017-03-29 05:26:45', '', 0, 'http://localhost/clickclickdraw/?page_id=45', 0, 'page', '', 0),
 (46, 1, '2017-03-29 00:33:33', '2017-03-29 00:33:33', '', 'Contact', '', 'inherit', 'closed', 'closed', '', '45-revision-v1', '', '', '2017-03-29 00:33:33', '2017-03-29 00:33:33', '', 45, 'http://localhost/clickclickdraw/45-revision-v1/', 0, 'revision', '', 0),
 (47, 1, '2017-03-29 00:38:11', '0000-00-00 00:00:00', '', 'Home', '', 'draft', 'closed', 'closed', '', '', '', '', '2017-03-29 00:38:11', '0000-00-00 00:00:00', '', 0, 'http://localhost/clickclickdraw/?p=47', 1, 'nav_menu_item', '', 0),
 (48, 1, '2017-03-29 00:38:11', '0000-00-00 00:00:00', ' ', '', '', 'draft', 'closed', 'closed', '', '', '', '', '2017-03-29 00:38:11', '0000-00-00 00:00:00', '', 0, 'http://localhost/clickclickdraw/?p=48', 1, 'nav_menu_item', '', 0),
@@ -591,10 +605,17 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (61, 1, '2017-03-29 00:40:46', '2017-03-29 00:40:46', 'Hi, I’m Chris Fernandez, designer, illustrator, unpublished critic and perpetually disappointing blogger. I live in and love Philadelphia; sporadically making time for comics, bad action movies, good <em>actual</em> movies and Salsa – of the dancing variety, though the dip is a reoccurring character in my life, too.\r\n\r\nBeing fortunate enough to love what I do has so much to do with the great people and place I work at, <a href=\"http://brownsteingroup.com/\">Brownstein Group</a>. As a Associate Creative Director, I design, direct and implement beautiful campaigns and brands ranging from traditional to mobile to web and user experience design. For the past 4 years I have also had the great pleasure of teaching a small, but promising sampling of the next wave of future creative talents at my alma mater, <a href=\"http://drexel.edu/\">Drexel University</a>.\r\n\r\nIf you have a project in mind, I’m currently available for freelance work, so please drop a line. Or, if you happen to be a fellow kung-fu enthusiast and would like to recommend a movie or six, feel free to do so. I feel like I’m on the verge of becoming a black belt by sheer volume and frequency of kung fu. <a href=\"http://www.youtube.com/watch?v=7H7iemtCQXQ\">Sho’nuff</a>.', 'About', '', 'inherit', 'closed', 'closed', '', '43-revision-v1', '', '', '2017-03-29 00:40:46', '2017-03-29 00:40:46', '', 43, 'http://localhost/clickclickdraw/43-revision-v1/', 0, 'revision', '', 0),
 (62, 1, '2017-03-29 00:43:09', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-03-29 00:43:09', '0000-00-00 00:00:00', '', 0, 'http://localhost/clickclickdraw/?post_type=work&p=62', 0, 'work', '', 0),
 (63, 1, '2017-03-29 02:22:50', '2017-03-29 02:22:50', '{\n    \"show_on_front\": {\n        \"value\": \"page\",\n        \"type\": \"option\",\n        \"user_id\": 1\n    },\n    \"page_on_front\": {\n        \"value\": \"64\",\n        \"type\": \"option\",\n        \"user_id\": 1\n    },\n    \"page_for_posts\": {\n        \"value\": \"2\",\n        \"type\": \"option\",\n        \"user_id\": 1\n    }\n}', '', '', 'trash', 'closed', 'closed', '', '7a7aae23-c701-4659-8bac-bbd0b881ea28', '', '', '2017-03-29 02:22:50', '2017-03-29 02:22:50', '', 0, 'http://localhost/clickclickdraw/?p=63', 0, 'customize_changeset', '', 0),
-(64, 1, '2017-03-29 02:22:38', '2017-03-29 02:22:38', '', 'Work', '', 'publish', 'closed', 'closed', '', 'work', '', '', '2017-03-29 02:26:30', '2017-03-29 02:26:30', '', 0, 'http://localhost/clickclickdraw/?page_id=64', 0, 'page', '', 0),
+(64, 1, '2017-03-29 02:22:38', '2017-03-29 02:22:38', '', 'Work', '', 'publish', 'closed', 'closed', '', 'work', '', '', '2017-03-29 05:02:03', '2017-03-29 05:02:03', '', 0, 'http://localhost/clickclickdraw/?page_id=64', 0, 'page', '', 0),
 (65, 1, '2017-03-29 02:22:38', '2017-03-29 02:22:38', '', 'Work', '', 'inherit', 'closed', 'closed', '', '64-revision-v1', '', '', '2017-03-29 02:22:38', '2017-03-29 02:22:38', '', 64, 'http://localhost/clickclickdraw/64-revision-v1/', 0, 'revision', '', 0),
 (66, 1, '2017-03-29 02:31:05', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-03-29 02:31:05', '0000-00-00 00:00:00', '', 0, 'http://localhost/clickclickdraw/?page_id=66', 0, 'page', '', 0),
-(67, 1, '2017-03-29 02:31:19', '2017-03-29 02:31:19', 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!\r\n\r\n<img class=\"alignnone size-medium wp-image-41\" src=\"http://localhost/clickclickdraw/wp-content/uploads/2017/03/Chris-Fernandez-Agilitee-NFL-banner-300x66.png\" alt=\"\" width=\"300\" height=\"66\" />', 'Hello world!', '', 'inherit', 'closed', 'closed', '', '1-revision-v1', '', '', '2017-03-29 02:31:19', '2017-03-29 02:31:19', '', 1, 'http://localhost/clickclickdraw/1-revision-v1/', 0, 'revision', '', 0);
+(67, 1, '2017-03-29 02:31:19', '2017-03-29 02:31:19', 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!\r\n\r\n<img class=\"alignnone size-medium wp-image-41\" src=\"http://localhost/clickclickdraw/wp-content/uploads/2017/03/Chris-Fernandez-Agilitee-NFL-banner-300x66.png\" alt=\"\" width=\"300\" height=\"66\" />', 'Hello world!', '', 'inherit', 'closed', 'closed', '', '1-revision-v1', '', '', '2017-03-29 02:31:19', '2017-03-29 02:31:19', '', 1, 'http://localhost/clickclickdraw/1-revision-v1/', 0, 'revision', '', 0),
+(68, 1, '2017-03-29 04:37:59', '2017-03-29 04:37:59', '', 'Test 2', '', 'publish', 'open', 'open', '', 'test-2', '', '', '2017-03-29 04:37:59', '2017-03-29 04:37:59', '', 0, 'http://localhost/clickclickdraw/?p=68', 0, 'post', '', 0),
+(69, 1, '2017-03-29 04:37:59', '2017-03-29 04:37:59', '', 'Test 2', '', 'inherit', 'closed', 'closed', '', '68-revision-v1', '', '', '2017-03-29 04:37:59', '2017-03-29 04:37:59', '', 68, 'http://localhost/clickclickdraw/68-revision-v1/', 0, 'revision', '', 0),
+(70, 1, '2017-03-29 05:01:59', '2017-03-29 05:01:59', '', 'work-runningknight2', '', 'inherit', 'open', 'closed', '', 'work-runningknight2', '', '', '2017-03-29 05:01:59', '2017-03-29 05:01:59', '', 64, 'http://localhost/clickclickdraw/wp-content/uploads/2017/03/work-runningknight2.gif', 0, 'attachment', 'image/gif', 0),
+(71, 1, '2017-03-29 05:15:18', '2017-03-29 05:15:18', '', 'about_familyillustration2', '', 'inherit', 'open', 'closed', '', 'about_familyillustration2', '', '', '2017-03-29 05:15:18', '2017-03-29 05:15:18', '', 2, 'http://localhost/clickclickdraw/wp-content/uploads/2017/03/about_familyillustration2.png', 0, 'attachment', 'image/png', 0),
+(72, 1, '2017-03-29 05:22:53', '2017-03-29 05:22:53', '', 'about_mePainting2', '', 'inherit', 'open', 'closed', '', 'about_mepainting2', '', '', '2017-03-29 05:22:53', '2017-03-29 05:22:53', '', 43, 'http://localhost/clickclickdraw/wp-content/uploads/2017/03/about_mePainting2.png', 0, 'attachment', 'image/png', 0),
+(73, 1, '2017-03-29 05:26:15', '2017-03-29 05:26:15', 'Questions or inquiries? Even if you’re just looking for advice, I’d be happy to hear from you.\r\n\r\nSo please reach out and I will get back to you as soon as I can.', 'Contact', '', 'inherit', 'closed', 'closed', '', '45-revision-v1', '', '', '2017-03-29 05:26:15', '2017-03-29 05:26:15', '', 45, 'http://localhost/clickclickdraw/45-revision-v1/', 0, 'revision', '', 0),
+(74, 1, '2017-03-29 05:26:42', '2017-03-29 05:26:42', '', 'contact_banner2', '', 'inherit', 'open', 'closed', '', 'contact_banner2', '', '', '2017-03-29 05:26:42', '2017-03-29 05:26:42', '', 45, 'http://localhost/clickclickdraw/wp-content/uploads/2017/03/contact_banner2.png', 0, 'attachment', 'image/png', 0);
 
 -- --------------------------------------------------------
 
@@ -654,7 +675,8 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (56, 3, 0),
 (57, 3, 0),
 (59, 3, 0),
-(60, 3, 0);
+(60, 3, 0),
+(68, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -676,7 +698,7 @@ CREATE TABLE `wp_term_taxonomy` (
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
-(1, 1, 'category', '', 0, 1),
+(1, 1, 'category', '', 0, 2),
 (2, 2, 'category', '', 0, 1),
 (3, 3, 'nav_menu', '', 0, 5);
 
@@ -706,13 +728,13 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (6, 1, 'comment_shortcuts', 'false'),
 (7, 1, 'admin_color', 'fresh'),
 (8, 1, 'use_ssl', '0'),
-(9, 1, 'show_admin_bar_front', 'true'),
+(9, 1, 'show_admin_bar_front', 'false'),
 (10, 1, 'locale', ''),
 (11, 1, 'wp_capabilities', 'a:1:{s:13:\"administrator\";b:1;}'),
 (12, 1, 'wp_user_level', '10'),
 (13, 1, 'dismissed_wp_pointers', ''),
 (14, 1, 'show_welcome_panel', '1'),
-(15, 1, 'session_tokens', 'a:3:{s:64:\"0d3fa2b7f58c17f06b2b5a342f71cbe18464946b889d38a45316d69aca81d4f4\";a:4:{s:10:\"expiration\";i:1491952226;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:125:\"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 FirePHP/4Chrome\";s:5:\"login\";i:1490742626;}s:64:\"ffa7a373d0035dea4e783f461cd431b2dda1925df7569cf582b4ed92b2111464\";a:4:{s:10:\"expiration\";i:1490915431;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:125:\"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 FirePHP/4Chrome\";s:5:\"login\";i:1490742631;}s:64:\"2db8ab35f5090e3c449a6dd6ae95189b01c5bde9b0070a8ddf0517c471e1a641\";a:4:{s:10:\"expiration\";i:1490916245;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:125:\"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 FirePHP/4Chrome\";s:5:\"login\";i:1490743445;}}'),
+(15, 1, 'session_tokens', 'a:4:{s:64:\"0d3fa2b7f58c17f06b2b5a342f71cbe18464946b889d38a45316d69aca81d4f4\";a:4:{s:10:\"expiration\";i:1491952226;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:125:\"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 FirePHP/4Chrome\";s:5:\"login\";i:1490742626;}s:64:\"ffa7a373d0035dea4e783f461cd431b2dda1925df7569cf582b4ed92b2111464\";a:4:{s:10:\"expiration\";i:1490915431;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:125:\"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 FirePHP/4Chrome\";s:5:\"login\";i:1490742631;}s:64:\"2db8ab35f5090e3c449a6dd6ae95189b01c5bde9b0070a8ddf0517c471e1a641\";a:4:{s:10:\"expiration\";i:1490916245;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:125:\"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 FirePHP/4Chrome\";s:5:\"login\";i:1490743445;}s:64:\"9980ac555356048065985be9286f3f1e3b1d5e321a756165f55e6f3ef30a439c\";a:4:{s:10:\"expiration\";i:1491971868;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:125:\"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 FirePHP/4Chrome\";s:5:\"login\";i:1490762268;}}'),
 (16, 1, 'wp_dashboard_quick_press_last_post_id', '3'),
 (17, 1, 'managenav-menuscolumnshidden', 'a:5:{i:0;s:11:\"link-target\";i:1;s:11:\"css-classes\";i:2;s:3:\"xfn\";i:3;s:11:\"description\";i:4;s:15:\"title-attribute\";}'),
 (18, 1, 'metaboxhidden_nav-menus', 'a:3:{i:0;s:18:\"add-post-type-work\";i:1;s:12:\"add-post_tag\";i:2;s:15:\"add-post_format\";}'),
@@ -873,17 +895,17 @@ ALTER TABLE `wp_links`
 -- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=164;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 --
 -- AUTO_INCREMENT for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=223;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=237;
 --
 -- AUTO_INCREMENT for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 --
 -- AUTO_INCREMENT for table `wp_termmeta`
 --
