@@ -20,7 +20,9 @@ get_header(); ?>
         <h1 class="title about"><span><?php the_title(); ?></span></h1>
         <?php include 'inc/social.php'; ?>
       </header>
-      <?php the_content(); ?>
+      <div class="content">
+        <?php the_content(); ?>
+      </div>
   <?php endwhile;
 endif; ?>
 </div>

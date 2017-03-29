@@ -14,6 +14,7 @@ $ccRed: #ff6666
 $ccGreen: #66ffb3
 $ccBlue: #66e3ff
 $ccYellow: #e6ff66
+$mobile: 900px
 
 
 @mixin iconStart
@@ -25,6 +26,10 @@ $ccYellow: #e6ff66
 
 html
   font-size: 18px
+  margin-top: 0!important
+
+html:not(.wp-toolbar) body.logged-in
+  margin-top: 0!important
 
 body
   margin: 0
@@ -48,6 +53,29 @@ body
       background: $color
       color: $background
 
+nav#mobileNav
+  display: none
+  @media (max-width:$mobile)
+    display: block
+    position: fixed
+    top: 100px
+    z-index: 4
+    background: $ccGreen
+    width: 100%
+    max-height: 0
+    overflow: hidden
+    transition: max-height 0.3s ease-out
+    ul
+      padding: 2rem 0 2rem 2rem
+      list-style-type: none
+    a
+      display: block
+      color: #333
+      font-weight: 600
+      text-transform: uppercase
+      font-size: 1rem
+      text-decoration: none
+      padding: 0.25rem 0
 nav#mainNav
   height: 100px
   background: $ccGreen
@@ -57,6 +85,8 @@ nav#mainNav
   width: 100%
   box-shadow: 0px 0px 5px rgba(0,0,0,0.5)
   z-index: 5
+  @media (max-width:$mobile)
+    box-shadow: none
   ul
     list-style-type: none
     padding: 0
@@ -72,6 +102,9 @@ nav#mainNav
     height: 100px
     &:not(:last-of-type)
       border-right: 1px solid rgba(255,255,255,0.75)
+    @media (max-width:$mobile)
+      &:not(:nth-child(3))
+        display: none
     a:before
       +iconStart
       margin-right: 15px
@@ -88,6 +121,8 @@ nav#mainNav
       background-position: -84px 0px
     &:nth-child(3)
       font-size: 0
+      a:hover
+        background-color: transparent!important
       a:before
         content: ''
         position: absolute
@@ -119,29 +154,35 @@ nav#mainNav
       &:before
         background-image: url(images/labels_green.png)
 
-.blog nav#mainNav
-  background: $ccBlue
-  a:hover:before
-    background-image: url(images/labels_blue.png)
-  .current-menu-item:not(:nth-child(3))
-    a:before
+.blog
+  nav#mainNav, nav#mobileNav
+    background: $ccBlue
+    a:hover:before
       background-image: url(images/labels_blue.png)
+    .current-menu-item:not(:nth-child(3))
+      a:before
+        background-image: url(images/labels_blue.png)
 
-.page-template-about nav#mainNav
-  background: $ccOrange
-  a:hover:before
-    background-image: url(images/labels_orange.png)
-  .current-menu-item:not(:nth-child(3))
-    a:before
+.page-template-about
+  nav#mainNav, nav#mobileNav
+    background: $ccOrange
+    a:hover:before
       background-image: url(images/labels_orange.png)
+    .current-menu-item:not(:nth-child(3))
+      a:before
+        background-image: url(images/labels_orange.png)
+  .scaler
+    text-align: center
 
-.page-template-contact nav#mainNav
-  background: $ccYellow
-  a:hover:before
-    background-image: url(images/labels_yellow.png)
-  .current-menu-item:not(:nth-child(3))
-    a:before
+
+.page-template-contact
+  nav#mainNav, nav#mobileNav
+    background: $ccYellow
+    a:hover:before
       background-image: url(images/labels_yellow.png)
+    .current-menu-item:not(:nth-child(3))
+      a:before
+        background-image: url(images/labels_yellow.png)
 
 #wrapper
   margin: 100px auto 0
@@ -150,6 +191,16 @@ nav#mainNav
   width: 90%
   max-width: 905px
   margin: 1rem auto 0
+.content
+  p
+    font-weight: 100
+    a
+      color: $ccBlue
+      text-decoration: none
+      font-weight: 600
+      transition: color 0.2s ease-out
+      &:hover
+        color: darken($ccBlue, 25%)
 
 .title
   font-size: 46px
@@ -238,3 +289,84 @@ section.contact
     span
       background: $ccRed
   +cta($ccRed, #FFF)
+
+section.tweets
+  padding: 3rem 0 5rem
+  text-align: center
+  +cta(#FFF, $ccOrange)
+  p
+    font-size: 1.7rem
+    font-weight: 300
+    a
+      color: $ccOrange
+      text-decoration: none
+      transition: color 0.2s ease-out
+      &:hover
+        color: darken($ccOrange, 25%)
+  .title:before
+    +iconStart
+    width: 30px
+    height: 27px
+    background-image: url(images/label_twitter_black.png)
+    background-repeat: no-repeat
+  .title:after
+    bottom: calc(50% - 32px)
+
+
+$networks: ('twitter')('linkedin')('dribbble')('mailto')('instagram')
+.social-icons
+  @media (max-width: 550px)
+    max-width: 300px
+    margin: 0 auto
+  a
+    width: 51px
+    height: 51px
+    display: inline-block
+    vertical-align: middle
+    margin: 5px 1.2rem
+    transition: background-image 0.2s ease-out
+    @each $network, $i in $networks
+      &[href*="#{$network}"]
+        background-image: url(images/#{$network}.png)
+        &:hover
+          background-image: url(images/#{$network}_hover.png)
+
+
+footer
+  padding: 3rem 0 1.5rem
+  display: block
+  width: 100%
+  background: #333333
+  border-bottom: 10px solid #1a1a1a
+  text-align: center
+  #footer-logo
+    margin-bottom: 1rem
+  ul
+    list-style-type: none
+    padding: 0
+    @media (max-width:$mobile)
+      display: none
+  li
+    display: inline-block
+    vertical-align: middle
+    a
+      text-transform: uppercase
+      margin: 0 1.5rem
+      font-weight: 600
+      font-size: 0.75rem
+      color: #FFF
+      text-decoration: none
+      transition: color 0.2s ease-out
+      &:hover
+        color: $ccYellow
+  p
+    color: #666
+    font-size: 0.75rem
+    margin: 2rem auto 0
+    a
+      color: $ccYellow
+      text-decoration: none
+      font-weight: 600
+      transition: color 0.2s ease-out
+      &:hover
+        color: lighten($ccYellow, 25%)

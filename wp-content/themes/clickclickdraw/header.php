@@ -15,3 +15,9 @@
   <nav id="mainNav">
     <?php wp_nav_menu(); ?>
   </nav>
+  <nav id="mobileNav">
+    <?php
+    $args = array('menu' => 'Mobile/Footer Nav');
+    wp_nav_menu($args);
+    ?>
+  </nav>

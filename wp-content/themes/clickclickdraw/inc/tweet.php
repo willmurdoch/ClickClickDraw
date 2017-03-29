@@ -14,6 +14,8 @@
       $connection = new TwitterOAuth($consumer_key, $consumer_secret, $access_token, $access_token_secret);
       $content = $connection->get("account/verify_credentials");
       $statuses = $connection->get("statuses/user_timeline", ["count" => 5, "exclude_replies" => true]);
+      $date = $statuses[0]->created_at;
+      $date = DateTime::createFromFormat('M j', $date);
       $tweet = $statuses[0]->text;
 
       //Convert hash tags and links to work like you'd expect
@@ -21,8 +23,10 @@
       $tweet = preg_replace("/#([A-Za-z0-9\/\.]*)/", "<a target=\"_new\" href=\"http://twitter.com/search?q=$1\">#$1</a>", $tweet);
       $tweet = preg_replace("/@([A-Za-z0-9\/\.]*)/", "<a href=\"http://www.twitter.com/$1\">@$1</a>", $tweet);
 
-      echo $tweet; ?>
+      echo $tweet;
+      echo '<span class="date">'.$date.'</span>';
+      ?>
     </p>
-    <a class="btn" href="#" target="_blank"></a>
+    <a class="btn" href="https://twitter.com/c_illustrates" target="_blank">@C_ILLUSTRATES</a>
   </div>
 </section>
