@@ -14,6 +14,11 @@
 <body <?php body_class(); ?>>
   <nav id="mainNav">
     <?php wp_nav_menu(); ?>
+    <div class="burger-btn">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </nav>
   <nav id="mobileNav">
     <?php

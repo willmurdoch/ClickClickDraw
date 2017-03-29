@@ -7,6 +7,12 @@
   Tags: design, portfolio
   Text Domain: clickclickdraw
   */
+@media (max-width: 900px) {
+	#wpadminbar {
+		display: none;
+	}
+}
+
 html {
 	font-size: 18px;
 	margin-top: 0 !important;
@@ -22,6 +28,68 @@ body {
 	font-family: futura-pt, "Myriad Pro", "Sans Serif";
 }
 
+.burger-btn {
+	right: 20px;
+	top: 13px;
+	display: block;
+	position: absolute;
+	width: 30px;
+	height: 20px;
+}
+
+.burger-btn div {
+	width: 100%;
+	height: 4px;
+	background: #333;
+	position: absolute;
+	border-radius: 5px;
+	transition: all 0.2s ease-out;
+}
+
+.burger-btn div:nth-child(1) {
+	top: 0;
+	left: 0;
+	transform-origin: top left;
+}
+
+.burger-btn div:nth-child(2) {
+	top: 50%;
+	margin-top: -2px;
+}
+
+.burger-btn div:nth-child(3) {
+	bottom: 0;
+	transform-origin: bottom left;
+}
+
+@media (min-width: 900px) {
+	.burger-btn {
+		display: none;
+	}
+}
+
+.expanded .burger-btn div {
+	margin-left: 6px;
+}
+
+.expanded .burger-btn div:nth-child(1) {
+	transform: rotateZ(45deg);
+}
+
+.expanded .burger-btn div:nth-child(2) {
+	transform: scaleX(0.01);
+	opacity: 0;
+}
+
+.expanded .burger-btn div:nth-child(3) {
+	transform: rotateZ(-45deg);
+	bottom: -4px;
+}
+
+.expanded ~ nav#mobileNav {
+	max-height: 12rem;
+}
+
 nav#mobileNav {
 	display: none;
 }
@@ -30,7 +98,7 @@ nav#mobileNav {
 	nav#mobileNav {
 		display: block;
 		position: fixed;
-		top: 100px;
+		top: 50px;
 		z-index: 4;
 		background: #66ffb3;
 		width: 100%;
@@ -67,12 +135,14 @@ nav#mainNav {
 @media (max-width: 900px) {
 	nav#mainNav {
 		box-shadow: none;
+		height: 50px;
 	}
 }
 
 nav#mainNav ul {
 	list-style-type: none;
 	padding: 0;
+	width: 100%;
 	display: flex;
 	flex-flow: row nowrap;
 	text-align: center;
@@ -127,6 +197,16 @@ nav#mainNav li:nth-child(3) {
 	font-size: 0;
 }
 
+nav#mainNav li:nth-child(3) a {
+	font-size: 0;
+}
+
+@media (max-width: 900px) {
+	nav#mainNav li:nth-child(3) a {
+		width: 150px;
+	}
+}
+
 nav#mainNav li:nth-child(3) a:hover {
 	background-color: transparent !important;
 }
@@ -141,11 +221,23 @@ nav#mainNav li:nth-child(3) a:before {
 	display: block;
 	width: 162px;
 	height: 136px;
-	background: url(images/logo.png) center no-repeat !important;
+	background: url(images/logo.png) top center no-repeat !important;
+	background-size: contain !important;
 }
 
-nav#mainNav li:nth-child(3) a:hover:before {
-	filter: invert(100%) brightness(2);
+@media (max-width: 900px) {
+	nav#mainNav li:nth-child(3) a:before {
+		width: 112px;
+		height: 86px;
+		left: 1rem;
+		margin-left: 0;
+	}
+}
+
+@media (min-width: 900px) {
+	nav#mainNav li:nth-child(3) a:hover:before {
+		filter: invert(100%) brightness(2);
+	}
 }
 
 nav#mainNav a {
@@ -221,6 +313,30 @@ nav#mainNav .current-menu-item:not(:nth-child(3)) a:before, nav#mainNav .current
 
 .page-template-contact .scaler p {
 	margin: 1rem auto;
+}
+
+.single-work nav#mainNav li.menu-item-home:first-of-type {
+	background: #FFF;
+}
+
+.single-work nav#mainNav li.menu-item-home:first-of-type a:before {
+	background-image: url(images/labels_green.png);
+}
+
+.single-work nav#mainNav li.current_page_parent a {
+	background: transparent;
+}
+
+.single-work nav#mainNav li.current_page_parent a:before {
+	background-image: url(images/labels_white.png);
+}
+
+.single-work nav#mainNav li.current_page_parent a:hover {
+	background: #FFF;
+}
+
+.single-work nav#mainNav li.current_page_parent a:hover:before {
+	background-image: url(images/labels_green.png);
 }
 
 .blog-tile {
@@ -333,6 +449,12 @@ nav#mainNav .current-menu-item:not(:nth-child(3)) a:before, nav#mainNav .current
 	transition: background 0.2s ease-out, color 0.2s ease-out;
 }
 
+@media (max-width: 900px) {
+	.single-post a.btn, .single-post input[type="submit"] {
+		font-size: 1.1rem;
+	}
+}
+
 .single-post a.btn:hover, .single-post input[type="submit"]:hover {
 	background: #66e3ff;
 	color: #FFF;
@@ -356,6 +478,12 @@ form a.btn, form input[type="submit"] {
 	margin: 2rem auto 0;
 	cursor: pointer;
 	transition: background 0.2s ease-out, color 0.2s ease-out;
+}
+
+@media (max-width: 900px) {
+	form a.btn, form input[type="submit"] {
+		font-size: 1.1rem;
+	}
 }
 
 form a.btn:hover, form input[type="submit"]:hover {
@@ -473,6 +601,12 @@ form input[type="submit"] {
 	margin: 100px auto 0;
 }
 
+@media (max-width: 900px) {
+	#wrapper {
+		margin: 50px auto 0;
+	}
+}
+
 .scaler {
 	padding-top: 1rem;
 	width: 90%;
@@ -502,6 +636,13 @@ form input[type="submit"] {
 	font-weight: 100;
 	margin: 0 auto;
 	position: relative;
+	line-height: 1em;
+}
+
+@media (max-width: 900px) {
+	.title {
+		font-size: 33px;
+	}
 }
 
 .title span {
@@ -592,6 +733,22 @@ form input[type="submit"] {
 	height: auto;
 }
 
+@media (max-width: 900px) {
+	.hero img {
+		width: 1000px;
+		max-width: 1000px;
+		left: 50%;
+		margin-left: -500px;
+	}
+}
+
+@media (max-width: 900px) {
+	.single-work .hero img {
+		width: 1000px;
+		max-width: 1000px;
+	}
+}
+
 section.contact {
 	padding: 3rem 0 5rem;
 	background: #ff6666;
@@ -636,6 +793,12 @@ section.contact a.btn, section.contact input[type="submit"] {
 	transition: background 0.2s ease-out, color 0.2s ease-out;
 }
 
+@media (max-width: 900px) {
+	section.contact a.btn, section.contact input[type="submit"] {
+		font-size: 1.1rem;
+	}
+}
+
 section.contact a.btn:hover, section.contact input[type="submit"]:hover {
 	background: #FFF;
 	color: #ff6666;
@@ -659,6 +822,12 @@ section.tweets a.btn, section.tweets input[type="submit"] {
 	margin: 2rem auto 0;
 	cursor: pointer;
 	transition: background 0.2s ease-out, color 0.2s ease-out;
+}
+
+@media (max-width: 900px) {
+	section.tweets a.btn, section.tweets input[type="submit"] {
+		font-size: 1.1rem;
+	}
 }
 
 section.tweets a.btn:hover, section.tweets input[type="submit"]:hover {
@@ -714,6 +883,12 @@ section.tweets .title:after {
 	margin: 2rem auto 0;
 	cursor: pointer;
 	transition: background 0.2s ease-out, color 0.2s ease-out;
+}
+
+@media (max-width: 900px) {
+	.single-work a.btn, .single-work input[type="submit"] {
+		font-size: 1.1rem;
+	}
 }
 
 .single-work a.btn:hover, .single-work input[type="submit"]:hover {
