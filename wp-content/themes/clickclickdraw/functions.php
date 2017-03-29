@@ -97,7 +97,7 @@ function my_login_logo() { ?>
       }
       body.login div#login h1 {}
       body.login div#login h1 a {
-        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/header/ccd_logo.png);
+        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo_full.png);
         outline: 0;
         border: 0;
         box-shadow: none;
@@ -123,7 +123,7 @@ function my_login_logo() { ?>
       body.login div#login form#loginform input#user_pass {}
       body.login div#login form#loginform p.forgetmenot {}
       body.login div#login form#loginform p.forgetmenot input#rememberme:focus {
-        border-color: #8e292e;
+        border-color: #ff6666;
       }
       body.login div#login form#loginform p.submit {}
       body.login div#login form#loginform p.submit input#wp-submit {}
@@ -142,23 +142,23 @@ function my_login_logo() { ?>
         box-shadow: none;
       }
       body.login #nav a:hover{
-        color: #8e292e;
+        color: #ff6666;
       }
       body.login #backtoblog a{
         display: none;
       }
       body.login h1 a{
-        width: 106px;
+        width: 145px;
         height: 142px;
         padding: 0;
         background-size: contain;
         background-position: top center;
       }
       body.wp-core-ui{
-        background-color: #231f20;
+        background-color: #f5f5f5;
       }
       body.wp-core-ui.login form{
-        background: #231f20;
+        background: #f5f5f5;
         box-shadow: none;
         padding-bottom: 20px;
       }
@@ -168,41 +168,45 @@ function my_login_logo() { ?>
         transition: border-color 0.2s ease-out;
       }
       body.wp-core-ui.login input:focus, body.wp-core-ui.login input:active{
-        border-color: #8e292e;
+        border-color: #ff6666;
       }
       body.wp-core-ui.login input:-webkit-autofill{
-        -webkit-box-shadow: 0 0 0px 1000px #231f20 inset;
-        -webkit-text-fill-color: #FFF;
+        -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
+        -webkit-text-fill-color: #000;
       }
       body.wp-core-ui.login input[type=checkbox]{
-        background-color: #231f20;
+        background-color: #f5f5f5;
       }
       body.wp-core-ui.login input[type=checkbox]:focus, body.wp-core-ui.login input[type=checkbox]:active{
         box-shadow: none;
       }
       body.wp-core-ui.login input[type=checkbox]:checked:before{
-        color: #8e292e;
+        color: #ff6666;
       }
       body.wp-core-ui .wp-core-ui .button-group.button-large .button, body.wp-core-ui .button.button-large{
-        background-color: #8e292e;
+        background-color: #f5f5f5;
         font-size: 12px;
-        color: #FFF;
+        color: #ff6666;
         text-transform: uppercase;
-        transition: color 0.3s ease-out, background 0.3s ease-out;
+        transition: color 0.2s ease-out, background 0.2s ease-out;
         border-radius: 0;
         box-shadow: none;
         text-shadow: none;
-        border: 0;
+        border: 1px solid #ff6666;
         outline: 0;
         font-weight: 600;
         padding: 0.15em 2em;
         height: auto;
       }
+      body.wp-core-ui .wp-core-ui .button-group.button-large .button:hover, body.wp-core-ui .button.button-large:hover{
+        background: #ff6666;
+        color: #f5f5f5;
+      }
       ::selection {
-        background: #8e292e;
+        background: #ff6666;
       }
       ::-moz-selection {
-        background: #8e292e;
+        background: #ff6666;
       }
     </style>
 <?php }
