@@ -17,6 +17,7 @@
     endwhile; endif; ?>
     <a class="btn" href="../">Back to All Posts</a>
   </div>
+  <?php include 'inc/social.php'; ?>
   <?php include 'inc/contact.php'; ?>
 </div>
 <?php get_footer(); ?>

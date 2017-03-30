@@ -1,3 +1,3 @@
 <?php
-include 'work.php';
+header( 'Location: '.get_site_url() ) ;
 ?>

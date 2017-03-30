@@ -7,10 +7,20 @@
       <div class="hero"><img src="<?php echo $featuredImage; ?>" alt="" /></div>
       <div class="scaler">
       <header>
-          <img src="" alt="" />
           <h1 class="title work"><span><?php the_title(); ?></span></h1>
+          <p class="contributors">
+            <?php
+            if(have_rows('contributors')):
+              while(have_rows('contributors')): the_row();
+                echo '<span>'.get_sub_field('role').': <strong>'.get_sub_field('name').'</strong></span>';
+              endwhile;
+            endif;
+            ?>
+          </p>
           <?php include 'inc/social.php'; ?>
-          <?php the_content(); ?>
+          <div class="content">
+            <?php the_content(); ?>
+          </div>
         </header>
 
         <?php
@@ -19,6 +29,10 @@
             echo '<img class="gallery-image" src="'.get_sub_field('image').'" alt="" />';
           endwhile;
         endif; ?>
+        <?php if(get_field('link') != ''):
+          echo '<a class="btn ext" href="'.get_field('link').'" target="_blank">Launch Site</a>';
+        endif;
+        ?>
         <a class="btn" href="<?php echo get_site_url(); ?>">Back to All Work</a>
       </div>
   <?php endwhile;

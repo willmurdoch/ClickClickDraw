@@ -18,7 +18,6 @@ get_header(); ?>
       <header>
         <img src="" alt="" />
         <h1 class="title about"><span><?php the_title(); ?></span></h1>
-        <?php include 'inc/social.php'; ?>
       </header>
       <div class="content">
         <?php the_content(); ?>
