@@ -304,6 +304,11 @@ nav#mainNav
   100%
     transform: rotate(360deg) scale(1)
 
+.work-wrap
+  width: 100%
+  overflow: hidden
+  transition: height 1s ease-out
+
 .work-grid
   width: 100%
   margin: 2rem auto 4rem
@@ -321,7 +326,11 @@ nav#mainNav
 
 .work-tile
   width: 47%
-  height: 275px
+  height: 0
+  padding-bottom: 32%
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
   margin: 0 1.5% 1.5%
   display: inline-block
   position: relative
@@ -329,6 +338,7 @@ nav#mainNav
   overflow: hidden
   @media (max-width: 500px)
     width: 100%
+    padding-bottom: 55%
     margin: 0 0 1.5%
   img
     display: block
@@ -653,6 +663,7 @@ form
   img
     position: relative
     width: 100%
+    margin-bottom: -3%
     height: auto
     @media (max-width:$mobile)
       width: 1000px

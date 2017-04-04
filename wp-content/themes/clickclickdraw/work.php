@@ -37,6 +37,7 @@ if(!isset($_GET['ajax']))
          ?>
        </div>
       <?php endif; ?>
+      <div class="work-wrap">
        <div class="work-grid">
          <?php
          if(isset($_GET['offset'])) $offset = $_GET['offset'];
@@ -69,8 +70,7 @@ if(!isset($_GET['ajax']))
               else break;
              endwhile;
            endif;
-           echo '<a class="work-tile" href="'.get_the_permalink($work->ID).'">'; ?>
-            <img src="<?php echo $featuredImage; ?>" alt="" />
+           echo '<a class="work-tile" href="'.get_the_permalink($work->ID).'" style="background-image:url('.$featuredImage.')">'; ?>
             <span class="text-overlay">
               <span class="text-center">
                 <span class="icon <?php echo slugify($category[0]->name); ?>"></span>
@@ -84,7 +84,8 @@ if(!isset($_GET['ajax']))
          endforeach; ?>
        </div>
     <?php if(!isset($_GET['ajax'])): ?>
-     </div>
+      </div>
+    </div>
    <?php endif;
    endwhile;
   endif;
