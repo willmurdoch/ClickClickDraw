@@ -5,10 +5,10 @@
     <?php //Call twitteroauth library and set credentials
       require 'twitteroauth/autoload.php';
       use Abraham\TwitterOAuth\TwitterOAuth;
-      $consumer_key = 'X91A01MHzmyC918nRnqvsX18c';
-      $consumer_secret = 'qwm6u7DsQY2gdzoVcqmXNHM8ks60tgaWPVh9ahk4gWoKCN53qI';
-      $access_token = '2384001006-bKOA3PUrVIhDNmT0LRVi8TdpVTT0mnRcDA6AP3g';
-      $access_token_secret = 'nkpFHgBaJ3BDfGuYF92egdMF5RQ7L5F1OcT2t5HTFMWzc';
+      $consumer_key = '1lIq3sFLTBM3WRguCQx3KA1dk';
+      $consumer_secret = 'yItnl5TWGUIZIPSGuomD9vJvaZ3coSOHyM8DZIheJFaf1ypWG1';
+      $access_token = '108376989-Dmcojzi8hQIzatC13AcwBzLRSqIstnTNhJpr4Nrg';
+      $access_token_secret = 'Ki2VidvtvO1wEK9dCN8EYgEMu5fsuu6CHOTw47bsDqUpN';
 
       //Establish connection and get latest tweet's text
       $connection = new TwitterOAuth($consumer_key, $consumer_secret, $access_token, $access_token_secret);

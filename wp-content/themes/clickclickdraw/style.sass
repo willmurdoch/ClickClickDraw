@@ -143,6 +143,15 @@ nav#mainNav
   width: 100%
   box-shadow: 0px 0px 5px rgba(0,0,0,0.5)
   z-index: 5
+  transition: height 0.3s ease-out
+  &.collapsed
+    // height: 75px
+    // li
+    //   height: 75px
+    //   &:nth-child(3) a:before
+    //     transform: scale(0.9)
+    // a
+    //   line-height: 75px
   @media (max-width:$mobile)
     box-shadow: none
     height: 50px
@@ -160,6 +169,7 @@ nav#mainNav
   li
     flex: 1
     height: 100px
+    transition: height 0.3s ease-out
     &:not(:last-of-type)
       border-right: 1px solid rgba(255,255,255,0.75)
     @media (max-width:$mobile)
@@ -199,6 +209,8 @@ nav#mainNav
         height: 136px
         background: url(images/logo.png) top center no-repeat!important
         background-size: contain!important
+        transform-origin: top center
+        transition: all 0.3s ease-out
         @media(max-width: $mobile)
           width: 112px
           height: 86px
@@ -215,6 +227,7 @@ nav#mainNav
     color: #000
     text-decoration: none
     font-weight: 600
+    transition: line-height 0.3s ease-out
     &:hover
       background: #FFF
       &:before
@@ -723,7 +736,6 @@ form
   img
     position: relative
     width: 100%
-    margin-bottom: -3%
     height: auto
     @media (max-width:$mobile)
       width: 1000px

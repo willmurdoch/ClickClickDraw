@@ -8,7 +8,7 @@
   <link rel="shortcut icon" href="<?php echo get_site_url(); ?>/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="<?php echo get_site_url(); ?>/favicon.ico" type="image/x-icon" />
   <script src="<?php echo get_template_directory_uri(); ?>/js/typekit_cache.js"></script>
-  <script src="https://use.typekit.net/cpj5imj.js"></script>
+  <script src="//use.typekit.net/mtf2asi.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body <?php body_class(); ?>>

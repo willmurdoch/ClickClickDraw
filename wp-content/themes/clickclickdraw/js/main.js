@@ -26,6 +26,10 @@ $(document).ready(function(){
 
 $(window).scroll(function(){
   $('.hero img').css('transform', 'translateY('+$(window).scrollTop()/1.1+'px)');
+  if($(window).scrollTop() > 300){
+    $('nav#mainNav').addClass('collapsed');
+  }
+  else $('nav#mainNav').removeClass('collapsed');
 });
 
 function lazyLoopInit(){
