@@ -21,7 +21,7 @@ $mobile: 900px
   content: ''
   position: relative
   display: inline-block
-  height: 44px
+  height: 48px
   vertical-align: middle
 
 @media(max-width: $mobile)
@@ -38,6 +38,7 @@ html:not(.wp-toolbar) body.logged-in
 body
   margin: 0
   padding: 0
+  overflow-y: scroll
   font-family: futura-pt, "Myriad Pro", "Sans Serif"
 
 
@@ -175,7 +176,7 @@ nav#mainNav
       width: 47px
     a[href*="about"]:before
       background-position: -120px 0px
-      width: 25px
+      width: 35px
     a[href*="contact"]:before
       background-position: -84px 0px
     &:nth-child(3)
@@ -203,9 +204,8 @@ nav#mainNav
           height: 86px
           left: 1rem
           margin-left: 0
-      a:hover:before
-        @media (min-width: $mobile)
-          filter: invert(100%) brightness(2)
+      a:hover
+        background: #FFF!important
   a
     display: block
     text-transform: uppercase
@@ -277,6 +277,9 @@ nav#mainNav
         &:before
           background-image: url(images/labels_green.png)
 
+.work-list
+  .scaler
+    max-width: 1180px
 
 .work-filters
   margin-top: 1.75rem
@@ -296,13 +299,6 @@ nav#mainNav
       color: #FFF
       background: $ccGreen
 
-@keyframes spin
-  0%
-    transform: rotate(0deg) scale(1)
-  50%
-    transform: rotate(180deg) scale(0.85)
-  100%
-    transform: rotate(360deg) scale(1)
 
 .work-wrap
   width: 100%
@@ -312,30 +308,77 @@ nav#mainNav
 .work-grid
   width: 100%
   margin: 2rem auto 4rem
-  .loading
+  &:before
+    content: ''
+    position: absolute
     display: block
-    width: 100px
-    height: 100px
-    margin: 4rem auto
-    background-image: url(images/logo_full.png)
+    width: 106px
+    height: 144px
+    left: 50%
+    margin: 3rem 0 4rem -63px
+    background-image: url(images/loader_anim.gif)
     background-size: contain
     background-position: center
     background-repeat: no-repeat
-    transform-origin: center
-    animation: spin 0.5s linear infinite
+    opacity: 0
+    transition: opacity 0.3s ease-out
+  &.loading:before
+    opacity: 1
+  &.populated:not(.loading):before
+    opacity: 0
+
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes popIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes popOut
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+$max: 12
+.populated
+  .work-tile
+    opacity: 0
+    animation: popIn 0.25s ease-out forwards
+    @for $i from 1 through $max
+      &:nth-child(#{$i})
+        animation-delay: #{$i*0.1}s
+
+.loading
+  .work-tile
+    opacity: 1
+    animation: popOut 0.25s ease-out forwards
+    animation-delay: 0s!important
 
 .work-tile
-  width: 47%
+  width: 30%
   height: 0
-  padding-bottom: 32%
+  padding-bottom: 20%
   background-size: cover
   background-position: center
   background-repeat: no-repeat
-  margin: 0 1.5% 1.5%
+  margin: 0 1% 1.25%
   display: inline-block
   position: relative
   outline: 1px solid #CCC
   overflow: hidden
+  &:nth-child(n+12)
+    opacity: 0
+    animation: fadeIn 0.5s 0.2s ease-out forwards
+  @media (max-width: 1024px)
+    width: 48%
+    padding-bottom: 32%
   @media (max-width: 500px)
     width: 100%
     padding-bottom: 55%
@@ -376,18 +419,20 @@ nav#mainNav
       background-repeat: no-repeat
       background-size: contain
       background-position: center bottom
-      &.illustration, &.animation
+      &.illustration
         background-image: url(images/illustration_icon.png)
-      &.invitation-amp-promotional-illustration, &.branding-amp-collateral, &.print
+      &.invitation-amp-promotional-illustration, &.branding-amp-collateral, &.print, &.animation, &.design
         background-image: url(images/collateral_icon.png)
-      &.branding-amp-web-design, &.website-redesign-amp-ux
+      &.branding-amp-web-design, &.website-redesign-amp-ux, &.shop
         background-image: url(images/website_icon.png)
 
     .header
       font-weight: 300
-      font-size: 1.5rem
+      font-size: 1.3rem
       line-height: 1em
       text-transform: uppercase
+      @media (max-width: 1024px)
+        font-size: 1.5rem
     .category
       text-transform: lowercase
       font-size: 1rem
@@ -423,6 +468,16 @@ nav#mainNav
       height: 20px
       width: auto
       max-width: auto
+
+.blog-wrap
+  width: 100%
+  overflow: hidden
+  transition: height 1s ease-out
+
+.blog-items
+  width: 100%
+  margin: 0 auto 2rem
+  display: inline-block
 
 .blog-tile
   max-width: 800px
@@ -551,14 +606,14 @@ form
       margin: 0 0 0.25rem
       @media (max-width:$mobile)
         width: 100%
-  .wpcf7-validation-errors
-    display: block
+  .wpcf7-validation-errors, .wpcf7-response-output
     width: 100%
     font-size: 1rem
     margin: 0 0 2rem
     padding: 0
     border: 0
-    color: $ccRed
+  .ajax-loader
+    float: right
   input, textarea
     outline: 0
     appearance: none
@@ -571,6 +626,11 @@ form
       box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
   input[type="submit"]
     font-weight: 500
+    border: 0
+    box-shadow: 0px 0px 0px rgba(0,0,0,0)
+    &:focus, &:active
+      background: #333
+      color: $ccYellow
 
 
 #wrapper
@@ -641,7 +701,7 @@ form
   &.about
     &:before
       +iconStart
-      width: 25px
+      width: 35px
       background-position: -120px 0
       display: block
       margin: 0 auto

@@ -25,6 +25,7 @@ html:not(.wp-toolbar) body.logged-in {
 body {
   margin: 0;
   padding: 0;
+  overflow-y: scroll;
   font-family: futura-pt, "Myriad Pro", "Sans Serif";
 }
 
@@ -171,7 +172,7 @@ nav#mainNav li a:before {
   content: '';
   position: relative;
   display: inline-block;
-  height: 44px;
+  height: 48px;
   vertical-align: middle;
   margin-right: 15px;
   width: 37px;
@@ -186,7 +187,7 @@ nav#mainNav li a[href*="blog"]:before {
 
 nav#mainNav li a[href*="about"]:before {
   background-position: -120px 0px;
-  width: 25px;
+  width: 35px;
 }
 
 nav#mainNav li a[href*="contact"]:before {
@@ -234,10 +235,8 @@ nav#mainNav li:nth-child(3) a:before {
   }
 }
 
-@media (min-width: 900px) {
-  nav#mainNav li:nth-child(3) a:hover:before {
-    filter: invert(100%) brightness(2);
-  }
+nav#mainNav li:nth-child(3) a:hover {
+  background: #FFF !important;
 }
 
 nav#mainNav a {
@@ -339,6 +338,10 @@ nav#mainNav .current-menu-item:not(:nth-child(3)) a:before, nav#mainNav .current
   background-image: url(images/labels_green.png);
 }
 
+.work-list .scaler {
+  max-width: 1180px;
+}
+
 .work-filters {
   margin-top: 1.75rem;
   text-align: center;
@@ -362,18 +365,6 @@ nav#mainNav .current-menu-item:not(:nth-child(3)) a:before, nav#mainNav .current
   background: #66ffb3;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(180deg) scale(0.85);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-
 .work-wrap {
   width: 100%;
   overflow: hidden;
@@ -385,31 +376,140 @@ nav#mainNav .current-menu-item:not(:nth-child(3)) a:before, nav#mainNav .current
   margin: 2rem auto 4rem;
 }
 
-.work-grid .loading {
+.work-grid:before {
+  content: '';
+  position: absolute;
   display: block;
-  width: 100px;
-  height: 100px;
-  margin: 4rem auto;
-  background-image: url(images/logo_full.png);
+  width: 106px;
+  height: 144px;
+  left: 50%;
+  margin: 3rem 0 4rem -63px;
+  background-image: url(images/loader_anim.gif);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  transform-origin: center;
-  animation: spin 0.5s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.work-grid.loading:before {
+  opacity: 1;
+}
+
+.work-grid.populated:not(.loading):before {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.populated .work-tile {
+  opacity: 0;
+  animation: popIn 0.25s ease-out forwards;
+}
+
+.populated .work-tile:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.populated .work-tile:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.populated .work-tile:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.populated .work-tile:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.populated .work-tile:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.populated .work-tile:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.populated .work-tile:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.populated .work-tile:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.populated .work-tile:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.populated .work-tile:nth-child(10) {
+  animation-delay: 1s;
+}
+
+.populated .work-tile:nth-child(11) {
+  animation-delay: 1.1s;
+}
+
+.populated .work-tile:nth-child(12) {
+  animation-delay: 1.2s;
+}
+
+.loading .work-tile {
+  opacity: 1;
+  animation: popOut 0.25s ease-out forwards;
+  animation-delay: 0s !important;
 }
 
 .work-tile {
-  width: 47%;
+  width: 30%;
   height: 0;
-  padding-bottom: 32%;
+  padding-bottom: 20%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0 1.5% 1.5%;
+  margin: 0 1% 1.25%;
   display: inline-block;
   position: relative;
   outline: 1px solid #CCC;
   overflow: hidden;
+}
+
+.work-tile:nth-child(n+12) {
+  opacity: 0;
+  animation: fadeIn 0.5s 0.2s ease-out forwards;
+}
+
+@media (max-width: 1024px) {
+  .work-tile {
+    width: 48%;
+    padding-bottom: 32%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -470,23 +570,29 @@ nav#mainNav .current-menu-item:not(:nth-child(3)) a:before, nav#mainNav .current
   background-position: center bottom;
 }
 
-.work-tile .text-overlay .icon.illustration, .work-tile .text-overlay .icon.animation {
+.work-tile .text-overlay .icon.illustration {
   background-image: url(images/illustration_icon.png);
 }
 
-.work-tile .text-overlay .icon.invitation-amp-promotional-illustration, .work-tile .text-overlay .icon.branding-amp-collateral, .work-tile .text-overlay .icon.print {
+.work-tile .text-overlay .icon.invitation-amp-promotional-illustration, .work-tile .text-overlay .icon.branding-amp-collateral, .work-tile .text-overlay .icon.print, .work-tile .text-overlay .icon.animation, .work-tile .text-overlay .icon.design {
   background-image: url(images/collateral_icon.png);
 }
 
-.work-tile .text-overlay .icon.branding-amp-web-design, .work-tile .text-overlay .icon.website-redesign-amp-ux {
+.work-tile .text-overlay .icon.branding-amp-web-design, .work-tile .text-overlay .icon.website-redesign-amp-ux, .work-tile .text-overlay .icon.shop {
   background-image: url(images/website_icon.png);
 }
 
 .work-tile .text-overlay .header {
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1em;
   text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .work-tile .text-overlay .header {
+    font-size: 1.5rem;
+  }
 }
 
 .work-tile .text-overlay .category {
@@ -538,6 +644,18 @@ nav#mainNav .current-menu-item:not(:nth-child(3)) a:before, nav#mainNav .current
   height: 20px;
   width: auto;
   max-width: auto;
+}
+
+.blog-wrap {
+  width: 100%;
+  overflow: hidden;
+  transition: height 1s ease-out;
+}
+
+.blog-items {
+  width: 100%;
+  margin: 0 auto 2rem;
+  display: inline-block;
 }
 
 .blog-tile {
@@ -782,14 +900,16 @@ form fieldset label {
   }
 }
 
-form .wpcf7-validation-errors {
-  display: block;
+form .wpcf7-validation-errors, form .wpcf7-response-output {
   width: 100%;
   font-size: 1rem;
   margin: 0 0 2rem;
   padding: 0;
   border: 0;
-  color: #ff6666;
+}
+
+form .ajax-loader {
+  float: right;
 }
 
 form input, form textarea {
@@ -808,6 +928,13 @@ form input:focus, form input:active, form textarea:focus, form textarea:active {
 
 form input[type="submit"] {
   font-weight: 500;
+  border: 0;
+  box-shadow: 0px 0px 0px transparent;
+}
+
+form input[type="submit"]:focus, form input[type="submit"]:active {
+  background: #333;
+  color: #e6ff66;
 }
 
 #wrapper {
@@ -886,7 +1013,7 @@ form input[type="submit"] {
   content: '';
   position: relative;
   display: inline-block;
-  height: 44px;
+  height: 48px;
   vertical-align: middle;
   width: 36px;
   display: block;
@@ -898,7 +1025,7 @@ form input[type="submit"] {
   content: '';
   position: relative;
   display: inline-block;
-  height: 44px;
+  height: 48px;
   vertical-align: middle;
   width: 45px;
   background-position: -38px 0;
@@ -911,9 +1038,9 @@ form input[type="submit"] {
   content: '';
   position: relative;
   display: inline-block;
-  height: 44px;
+  height: 48px;
   vertical-align: middle;
-  width: 25px;
+  width: 35px;
   background-position: -120px 0;
   display: block;
   margin: 0 auto;
@@ -924,7 +1051,7 @@ form input[type="submit"] {
   content: '';
   position: relative;
   display: inline-block;
-  height: 44px;
+  height: 48px;
   vertical-align: middle;
   width: 37px;
   background-position: -84px 0;
@@ -1185,7 +1312,7 @@ section.tweets .title:before {
   content: '';
   position: relative;
   display: inline-block;
-  height: 44px;
+  height: 48px;
   vertical-align: middle;
   width: 30px;
   height: 27px;

@@ -9,7 +9,7 @@
  */
 if(!isset($_GET['ajax']))
   get_header(); ?>
- <div id="wrapper" class="single-work">
+ <div id="wrapper" class="single-work work-list">
  <?php
  if(have_posts()):
    while(have_posts()): the_post();
@@ -45,14 +45,14 @@ if(!isset($_GET['ajax']))
          if(isset($_GET['category'])){
            $args = array(
              'post_type' => 'work',
-             'posts_per_page' => 8,
+             'posts_per_page' => 12,
              'offset' => $offset,
              'category_name' => $_GET['category']
            );
          }
          else $args = array(
            'post_type' => 'work',
-           'posts_per_page' => 8,
+           'posts_per_page' => 12,
            'offset' => $offset
          );
          $myWork = get_posts($args);
@@ -76,7 +76,21 @@ if(!isset($_GET['ajax']))
                 <span class="icon <?php echo slugify($category[0]->name); ?>"></span>
                 <span class="text">
                   <p class="header"><?php echo $work->post_title; ?></p>
-                  <p class="category"><?php echo $category[0]->name; ?></p>
+                  <p class="category">
+                    <?php
+                    $i = 0;
+                    foreach($category as $cat){
+                      echo $cat->name;
+                      $i++;
+                      if($i > 0 && $i == count($category) - 1){
+                        echo ' & ';
+                      }
+                      elseif($i > 0 && $i < count($category) - 1){
+                        echo ', ';
+                      }
+                    }
+                    ?>
+                  </p>
                 </span>
               </span>
             </span>
