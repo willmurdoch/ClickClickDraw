@@ -393,9 +393,9 @@ $max: 12
     width: 48%
     padding-bottom: 32%
   @media (max-width: 500px)
-    width: 100%
+    width: calc(100% - 2px)
     padding-bottom: 55%
-    margin: 0 0 1.5%
+    margin: 0 0 1.5% 1px
   img
     display: block
     width: 100%
@@ -438,14 +438,16 @@ $max: 12
         background-image: url(images/collateral_icon.png)
       &.branding-amp-web-design, &.website-redesign-amp-ux, &.shop
         background-image: url(images/website_icon.png)
+      @media (max-width: 800px)
+        padding-bottom: 15%
 
     .header
       font-weight: 300
       font-size: 1.3rem
       line-height: 1em
       text-transform: uppercase
-      @media (max-width: 1024px)
-        font-size: 1.5rem
+      @media (max-width: 800px)
+        font-size: 1.15rem
     .category
       text-transform: lowercase
       font-size: 1rem
@@ -785,7 +787,9 @@ form
       max-width: 100%
       height: auto
       margin: 0.5rem auto
-  img.gallery-image
+
+  img.gallery-image, video.gallery-video
+    display: block
     max-width: 100%
     height: auto
     margin: 0.5rem auto

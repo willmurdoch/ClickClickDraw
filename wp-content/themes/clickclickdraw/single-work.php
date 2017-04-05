@@ -26,7 +26,10 @@
         <?php
         if(have_rows('gallery')):
           while(have_rows('gallery')): the_row();
-            echo '<img class="gallery-image" src="'.get_sub_field('image').'" alt="" />';
+            if(get_sub_field('video') != ''){
+              echo '<video controls poster="'.get_sub_field('image').'" class="gallery-video"><source src="'.get_sub_field('video').'" type="video/mp4"></source></video>';
+            }
+            else echo '<img class="gallery-image" src="'.get_sub_field('image').'" alt="" />';
           endwhile;
         endif; ?>
         <?php if(get_field('link') != ''):

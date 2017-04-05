@@ -63,11 +63,14 @@ if(!isset($_GET['ajax']))
              $featuredImage = get_field('tile_image', $work->ID);
            elseif(have_rows('gallery', $work->ID)):
              while(have_rows('gallery', $work->ID)): the_row();
-              if($i == 0){
-                $featuredImage = get_sub_field('image');
-                $i++;
+              if(get_sub_field('video') == ''){
+                if($i == 0){
+                  $featuredImage = get_sub_field('image');
+                  $i++;
+                }
+                else break;
               }
-              else break;
+              else continue;
              endwhile;
            endif;
            echo '<a class="work-tile" href="'.get_the_permalink($work->ID).'" style="background-image:url('.$featuredImage.')">'; ?>
