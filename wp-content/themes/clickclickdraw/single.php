@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div id="wrapper" class="blog-post">
   <?php $uploads = wp_upload_dir(); ?>
-  <div class="hero"><img src="<?php echo $uploads['url']; ?>/about_banner.jpg" alt="" /></div>
+  <div class="hero"></div>
   <div class="scaler">
     <header>
       <h1 class="title blog"><span>Blog</h1>

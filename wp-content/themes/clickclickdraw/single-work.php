@@ -19,7 +19,12 @@
           </p>
           <?php include 'inc/social.php'; ?>
           <div class="content">
-            <?php the_content(); ?>
+            <?php the_content();
+            if(get_field('link_text') == '') $linkText = 'Launch Site';
+            else $linkText = get_field('link_text');
+            if(in_category(array('Shop'))):
+              echo '<a class="btn ext" href="'.get_field('link').'" target="_blank">'.$linkText.'</a>';
+            endif; ?>
           </div>
         </header>
 
@@ -33,7 +38,7 @@
           endwhile;
         endif; ?>
         <?php if(get_field('link') != ''):
-          echo '<a class="btn ext" href="'.get_field('link').'" target="_blank">Launch Site</a>';
+          echo '<a class="btn ext" href="'.get_field('link').'" target="_blank">'.$linkText.'</a>';
         endif;
         ?>
         <a class="btn" href="<?php echo get_site_url(); ?>">Back to All Work</a>

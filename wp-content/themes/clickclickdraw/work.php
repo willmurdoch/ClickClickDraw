@@ -76,7 +76,7 @@ if(!isset($_GET['ajax']))
            echo '<a class="work-tile" href="'.get_the_permalink($work->ID).'" style="background-image:url('.$featuredImage.')">'; ?>
             <span class="text-overlay">
               <span class="text-center">
-                <span class="icon <?php echo slugify($category[0]->name); ?>"></span>
+                <span class="icon <?php echo slugify($category[0]->name).' '.slugify($category[1]->name); ?>"></span>
                 <span class="text">
                   <p class="header"><?php echo $work->post_title; ?></p>
                   <p class="category">

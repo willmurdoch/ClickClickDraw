@@ -583,8 +583,12 @@ nav#mainNav .current-menu-item:not(:nth-child(3)) a:before, nav#mainNav .current
 	background-image: url(images/collateral_icon.png);
 }
 
-.work-tile .text-overlay .icon.branding-amp-web-design, .work-tile .text-overlay .icon.website-redesign-amp-ux, .work-tile .text-overlay .icon.shop {
+.work-tile .text-overlay .icon.branding-amp-web-design, .work-tile .text-overlay .icon.website-redesign-amp-ux {
 	background-image: url(images/website_icon.png);
+}
+
+.work-tile .text-overlay .icon.shop, .work-tile .text-overlay .icon.illustration.shop {
+	background-image: url(images/icon_shop.png);
 }
 
 @media (max-width: 800px) {
